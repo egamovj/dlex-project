@@ -1,0 +1,113 @@
+.back_color {
+    background-color: #F9F9FB;
+    padding: 100px 0 130px 0;
+    position: relative;
+}
+
+.country {
+    @include center-items;
+    flex-direction: column;
+    h2 {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 56px;
+        text-align: center;
+        color: #121127;
+    }
+    p {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 36px;
+        text-align: center;
+        color: #1211278F;
+        margin-top: 8px;
+    }
+    &__number {
+        position: absolute;
+        bottom: -80px;
+        background-color: $main-text-color;
+        max-width: 936px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 40px 0;
+        border-radius: 10px;
+        box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.05);
+        -webkit-box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.05);
+        -moz-box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.05);
+        &-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            strong {
+                color: #444BD3;
+                font-size: 40px;
+                line-height: 56px;
+            }
+            span {
+                font-size: 14px;
+                line-height: 25px;
+                color: #1211278F;
+            }
+        }
+    }
+}
+
+@include for-large-tablet {
+    .country {
+        &__number {
+            max-width: 748px;
+            width: 100%;
+        }
+    }
+}
+
+@include for-tablet {
+    .country {
+        h2 {
+            font-size: 32px;
+            line-height: 48px;
+            max-width: 546px;
+            width: 100%;
+        }
+        p {
+            font-size: 16px;
+            line-height: 26px;
+            max-width: 546px;
+            width: 100%;
+        }
+        &__number {
+            max-width: 546px;
+            width: 100%;
+            strong {
+                font-size: 34px;
+            }
+        }
+    }
+}
+
+@include for-mobile {
+    .country {
+        h2 {
+            font-size: 28px;
+            max-width: 350px;
+        }
+        p {
+            max-width: 350px;
+        }
+        &__number {
+            width: auto;
+            gap: 30px;
+            padding: 40px 10px;
+            &-card {
+                strong {
+                    font-size: 28px;
+                }
+                span {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}

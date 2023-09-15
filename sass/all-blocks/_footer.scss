@@ -1,0 +1,95 @@
+footer {
+    margin-top: 170px;
+    background-color: #121127;
+}
+
+.footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 100px 0;
+    border-bottom: 1px solid #FFFFFF1F;
+    row-gap: 40px;
+    column-gap: 50px;
+    &__dlex {
+        max-width: 360px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        p {
+            font-size: 16px;
+            font-weight: 400;
+            color: #FFFFFF8F;
+            line-height: 29px;
+        }
+        &-icons {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+    }
+    &__ul {
+        display: flex;
+        align-items: flex-start;
+        flex-grow: 1;
+        justify-content: space-around;
+        gap: 50px;
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            li {
+                list-style: none;
+                a {
+                    text-decoration: none;
+                    color: $main-text-color;
+                    font-size: 16px;
+                    transition: 0.3s;
+                }
+                a:hover {
+                    opacity: 0.56;
+                }
+            }
+            .one_item {
+                margin-bottom: 12px;
+                a {
+                    font-size: 14px;
+                    line-height: 24px;
+                    letter-spacing: 0.8px;
+                    text-align: left;
+                    text-transform: uppercase;
+                    color: #FFFFFF66;
+                }
+            }
+        }
+    }
+}
+
+.footer_two {
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+        font-size: 16px;
+        line-height: 29px;
+        color: $main-text-color;
+        opacity: 0.56;
+        font-weight: 300;
+        text-align: center;
+    }
+}
+
+@include for-tablet {
+    .footer {
+        flex-wrap: wrap;
+        &__dlex {
+            flex-grow: 1;
+        }
+        &__ul {
+            justify-content: space-around;
+        }
+    }
+}

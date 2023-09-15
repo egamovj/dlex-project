@@ -1,0 +1,221 @@
+header {
+    background-image: url('../images/header-ng.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: 850px;
+    .navbar {
+        @include center-items();
+        padding: 28px 0;
+        &__right {
+            display: flex;
+            align-items: center;
+            column-gap: 253px;
+            &-menu {
+                display: flex;
+                column-gap: 48px;
+                &-list {
+                    list-style: none;
+                }
+                &-link {
+                    text-decoration: none;
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 14px;
+                    line-height: 25.2px;
+                    font-weight: 400;
+                    color: $primary-color;
+                    transition: all 0.4s ease;
+                    &:hover {
+                        font-weight: 700;
+                        color: #444BD3;
+                        font-size: 15px;
+                    }
+                }
+                &-btn {
+                    display: none;
+                }
+            }
+            input {
+                display: none;
+            }
+        }
+        &__btn {
+            display: flex;
+            column-gap: 16px;
+            justify-content: flex-end;
+            &-watch {
+                background-color: #444BD3;
+                padding: 8px 24px;
+                font-family: 'Poppins', sans-serif;
+                font-size: 14px;
+                line-height: 24px;
+                font-weight: 500;
+                color: $main-text-color;
+                border: 1px solid transparent;
+                border-radius: 6px;
+                transition: all 0.4s ease;
+                &:hover {
+                    background-color: transparent;
+                    border-color: #444BD3;
+                    color: #444BD3;
+                }
+                &:active {
+                    transform: scale(0.96)
+                }
+            }
+            &-sign {
+                @include font;
+                padding: 8px 24px;
+                color: $primary-color;
+                border: 1px solid #1211271F;
+                border-radius: 6px;
+                color: $primary-color;
+                cursor: pointer;
+                transition: all 0.4s ease;
+                &:hover {
+                    background-color: #7178fd7c;
+                    color: #000;
+                    border-radius: 2px solid #444BD3;
+                }
+                &:active {
+                    transform: scale(0.96)
+                }
+            }
+        }
+    }
+    .hero {
+        .products {
+            padding-top: 64px;
+            &__wrapper {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                & h1 {
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 56px;
+                    line-height: 67.2px;
+                    font-weight: 700;
+                }
+                & p {
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 20px;
+                    line-height: 36px;
+                    font-weight: 400;
+                    margin-top: 8px;
+                    margin-bottom: 24px;
+                    max-width: 650px;
+                }
+            }
+        }
+    }
+}
+
+.navbar__checkbox:checked~.navbar__right-menu {
+    transform: translateX(0);
+}
+
+.navbar__right-menu-remove {
+    display: none;
+}
+
+.navbar__right-menu-add {
+    display: none;
+}
+
+.navbar__checkbox:checked~.navbar__right-menu-add {
+    display: none;
+}
+
+@include for-tablet() {
+    header {
+        .navbar {
+            &__right {
+                &-menu {
+                    position: fixed;
+                    top: 100px;
+                    right: 0;
+                    width: 40%;
+                    height: 100vh;
+                    background: #F0EFF4;
+                    z-index: 5;
+                    flex-direction: column;
+                    row-gap: 15px;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    transform: translateX(120%);
+                    transition: 0.5s;
+                    padding: 20px;
+                    &-list {
+                        flex-direction: column;
+                    }
+                    &-add {
+                        display: block;
+                    }
+                }
+            }
+        }
+        .hero {
+            .products {
+                &__wrapper {
+                    & h1 {
+                        font-size: 45px;
+                        line-height: 50px;
+                    }
+                    & p {
+                        font-size: 16px;
+                        line-height: 30px;
+                    }
+                    &-image {
+                        max-width: 768px;
+                        margin-top: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include for-mobile() {
+    header {
+        .navbar {
+            &__right {
+                &-menu {
+                    width: 100%;
+                    text-align: center;
+                    align-items: center;
+                    &-btn {
+                        display: block;
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 15px;
+                        justify-content: space-between;
+                        width: 100%;
+                    }
+                }
+            }
+            &__btn {
+                display: none;
+            }
+        }
+        .hero {
+            .products {
+                &__wrapper {
+                    & h1 {
+                        font-size: 36px;
+                        line-height: 30px;
+                    }
+                    & p {
+                        font-size: 16px;
+                        line-height: 30px;
+                    }
+                    &-image {
+                        max-width: 400px;
+                        margin-top: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

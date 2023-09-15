@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1160px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 15px;
+}
+
+@import './fonts';
+@import './variables';
+@import './mixins';
+@import './all-blocks/header';
+@import './all-blocks/solve-problems';
+@import './all-blocks/blog';
+@import './all-blocks/customer';
+@import './all-blocks/companies';
+@import './all-blocks/questions';
+@import './all-blocks/country';
+@import './all-blocks/footer';

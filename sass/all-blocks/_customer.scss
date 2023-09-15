@@ -1,0 +1,121 @@
+.customer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 0;
+    border-bottom: 2px solid #1211271F;
+    &__description {
+        max-width: 464px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        & span {
+            color: #444BD3;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+        & h2 {
+            color: #121127;
+            font-size: 40px;
+            font-weight: 800;
+            line-height: 56px;
+            margin: 20px 0 16px 0;
+        }
+        & p {
+            color: #1211278F;
+            font-size: 16px;
+            line-height: 28px;
+            max-width: 435px;
+            margin-bottom: 32px;
+        }
+        &-btn {
+            padding: 14px 32px;
+            color: $main-text-color;
+            background-color: #444BD3;
+            border: 1px solid transparent;
+            border-radius: 8px;
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+        &-btn:hover {
+            background-color: transparent;
+            border-color: #444BD3;
+            color: #444BD3;
+        }
+    }
+    &__imgs {
+        max-width: 550px;
+        position: relative;
+        &-video {
+            width: 100%;
+        }
+        &-stop {
+            width: 20%;
+            height: 20%;
+            position: absolute;
+            top: 35%;
+            left: 40%;
+        }
+    }
+}
+
+@include for-large-tablet {
+    .customer {
+        background-color: $main-text-color;
+        &__description {
+            max-width: 400px;
+            h2 {
+                font-size: 32px;
+                line-height: 40px;
+            }
+            p {
+                max-width: 435px;
+            }
+        }
+    }
+}
+
+@include for-tablet {
+    .customer {
+        padding: 70px 0;
+        &__description {
+            max-width: 300px;
+            h2 {
+                font-size: 24px;
+                line-height: 28px;
+                margin-top: 15px;
+            }
+            p {
+                max-width: 300px;
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }
+}
+
+@include for-mobile {
+    .customer {
+        flex-direction: column;
+        gap: 40px;
+        &__description {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 450px;
+            span {
+                text-align: center;
+            }
+            h2 {
+                text-align: center;
+                font-size: 32px;
+                line-height: 40px;
+            }
+            p {
+                text-align: center;
+            }
+        }
+    }
+}

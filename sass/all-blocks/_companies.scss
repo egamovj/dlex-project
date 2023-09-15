@@ -1,0 +1,31 @@
+.companies {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 0;
+    gap: 48px;
+    border-bottom: 2px solid #1211271F;
+    h3 {
+        font-size: 24px;
+        line-height: 34px;
+        color: #121127;
+        text-align: center;
+    }
+    &__logos {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 30px 15px;
+    }
+}
+
+@include for-mobile {
+    .companies {
+        &__logos {
+            justify-content: space-between;
+        }
+    }
+}
